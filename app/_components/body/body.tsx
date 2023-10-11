@@ -4,8 +4,6 @@ import UpItem from '../upitem'
 import { BigPanel } from '../panel/panel'
 import Hero from '../hero'
 import { HeroProps } from '../hero/hero'
-import Checkout from '../checkout'
-import Sticker from '../sticker'
 import { FlashSticker } from '../sticker/sticker'
 import { CheckoutProductProps } from '../checkout/types'
 
