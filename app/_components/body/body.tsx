@@ -27,7 +27,7 @@ const product: CheckoutProductProps = {
 }
 
 const heroProps: HeroProps = {
-	action: <Checkout {...product} />,
+	action: <></>,
 	image: '/images/ss-v1.png',
 	imageAlt: 'phone-ss',
 	subtext:
