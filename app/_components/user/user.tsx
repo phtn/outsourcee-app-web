@@ -1,38 +1,33 @@
 import { Button } from '@/components/ui/button'
-import { getAuth, signOut } from 'firebase/auth'
-import {
-	Sheet,
-	SheetContent,
-	SheetDescription,
-	SheetFooter,
-	SheetHeader,
-	SheetTitle,
-	SheetTrigger,
-} from '@/components/ui/sheet'
-import {
-	LogInIcon,
-	ReceiptIcon,
-	ShoppingBagIcon,
-	UserCircle2Icon,
-} from 'lucide-react'
-import {
-	UserContentBody,
-	ContentHeader,
-	FooterContainer,
-	LoginHeader,
-	LoginContent,
-	UserProfile,
-	UserDetailsContent,
-	SubscriptionCard,
-	PanelItem,
-	PanelDetails,
-	PanelContainer,
-} from './styled'
-import { getFirstWord, getInitials } from '@/lib/utils'
-import { signIn } from '@/api/signIn'
-import { firebaseApp } from '@/lib/db'
-import { UserDetailProps } from './types'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+// import { getAuth, signOut } from 'firebase/auth'
+// import {
+// 	Sheet,
+// 	SheetContent,
+// 	SheetDescription,
+// 	SheetFooter,
+// 	SheetHeader,
+// 	SheetTitle,
+// 	SheetTrigger,
+// } from '@/components/ui/sheet'
+import { UserCircle2Icon } from 'lucide-react'
+// import {
+// 	UserContentBody,
+// 	ContentHeader,
+// 	FooterContainer,
+// 	LoginHeader,
+// 	LoginContent,
+// 	UserProfile,
+// 	UserDetailsContent,
+// 	SubscriptionCard,
+// 	PanelItem,
+// 	PanelDetails,
+// 	PanelContainer,
+// } from './styled'
+// import { getFirstWord, getInitials } from '@/lib/utils'
+// import { signIn } from '@/api/signIn'
+// import { firebaseApp } from '@/lib/db'
+// import { UserDetailProps } from './types'
+// import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 // const auth = getAuth(firebaseApp)
 // const onSignOut = () =>
