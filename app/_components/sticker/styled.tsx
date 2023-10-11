@@ -6,7 +6,7 @@ type StickerProps = {
 }
 
 const Container = tw.div<StickerProps>`
-  ${(p) => (p.$lg ? 'h-44 w-44' : 'h- 10w-5')}
+  ${(p) => (p.$lg ? 'h-32 w-32' : 'h- 10w-5')}
 
   flex
   flex-row

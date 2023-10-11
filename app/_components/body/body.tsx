@@ -9,9 +9,6 @@ import { CheckoutProductProps } from '../checkout/types'
 
 /*
 
-
-
-
 */
 
 const product: CheckoutProductProps = {

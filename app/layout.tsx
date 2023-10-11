@@ -36,8 +36,8 @@ const inter = localFont({
 })
 
 export const metadata: Metadata = {
-	title: 'Re-up.ph',
-	description: 'Simplify your life.',
+	title: 'Outsourcee.app',
+	description: 'Simplify workload.',
 }
 
 export default function RootLayout({

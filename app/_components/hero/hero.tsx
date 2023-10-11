@@ -27,12 +27,12 @@ const Hero = (props: HeroProps) => {
 				<Title>Delegate with confidence</Title>
 				<span className='h-10'></span>
 				<Action size={'lg'}>
-					<span>Download Now</span>
-					<ArrowRightIcon
+					<span>Available soon!</span>
+					{/* <ArrowRightIcon
 						width={24}
 						height={24}
 						className='ml-3 h-4 w-auto'
-					/>
+					/> */}
 				</Action>
 			</Primary>
 			<Secondary>
