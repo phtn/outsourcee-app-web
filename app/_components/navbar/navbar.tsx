@@ -23,6 +23,7 @@ import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 import '@/components/ui/styles.css'
 import User from '../user'
+import { Settings } from 'lucide-react'
 
 const Menu = () => (
 	<Menubar>
@@ -42,7 +43,7 @@ const Menu = () => (
 export const Navbar = () => (
 	<Container>
 		<Brand>
-			re-up
+			outsourcee
 			<span className='font-thin text-xl text-foreground/75'>&trade;</span>
 		</Brand>
 		<Menu />
@@ -54,7 +55,7 @@ export const Navbar = () => (
 
 const Mens = () => (
 	<NavigationMenuItem>
-		<NavigationMenuTrigger>MEN</NavigationMenuTrigger>
+		<NavigationMenuTrigger>SERVICES</NavigationMenuTrigger>
 		<NavigationMenuContent className='NavigationMenuContent'>
 			<ul className='grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
 				<li className='row-span-3'>
@@ -63,8 +64,9 @@ const Mens = () => (
 							<a
 								className='flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md'
 								href='/'>
-								<div className='mb-2 mt-4 mr-3 text-xs font-bold text-primary-foreground'>
-									NEW
+								<Settings className='text-stone-100 h-44 w-44' />
+								<div className='mb-2 mt-4 mr-3 text-xs font-bold text-primary-foreground overflow-hidden'>
+									Explore all services
 								</div>
 							</a>
 						</MensCover>
@@ -72,18 +74,18 @@ const Mens = () => (
 				</li>
 				<ListItem
 					href='/'
-					title='Outdoors'>
-					Explore camping essentials.
+					title='Business'>
+					From small to large businesses
 				</ListItem>
 				<ListItem
 					href='/'
-					title='Hygiene'>
-					From hair products to your socks.
+					title='Household'>
+					From gardener to pet taker.
 				</ListItem>
 				<ListItem
 					href='/'
-					title='Sports'>
-					Explore active gears.
+					title='Individuals'>
+					From hobbies to personale projects
 				</ListItem>
 			</ul>
 		</NavigationMenuContent>
@@ -92,8 +94,8 @@ const Mens = () => (
 
 const Womens = () => (
 	<NavigationMenuItem>
-		<NavigationMenuTrigger>WOMEN</NavigationMenuTrigger>
-		<NavigationMenuContent className='NavigationMenuContent'>
+		<NavigationMenuTrigger>HOW IT WORKS</NavigationMenuTrigger>
+		{/* <NavigationMenuContent className='NavigationMenuContent'>
 			<ul className='grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
 				<li className='row-span-3'>
 					<NavigationMenuLink asChild>
@@ -124,7 +126,7 @@ const Womens = () => (
 					Get the right elements for your body.
 				</ListItem>
 			</ul>
-		</NavigationMenuContent>
+		</NavigationMenuContent> */}
 	</NavigationMenuItem>
 )
 
@@ -135,7 +137,7 @@ const Kids = () => (
 			legacyBehavior
 			passHref>
 			<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-				KIDS
+				SUPPORT
 			</NavigationMenuLink>
 		</Link>
 	</NavigationMenuItem>
@@ -148,7 +150,7 @@ const New = () => (
 			legacyBehavior
 			passHref>
 			<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-				NEW
+				FAQs
 			</NavigationMenuLink>
 		</Link>
 	</NavigationMenuItem>
@@ -161,7 +163,7 @@ const Customize = () => (
 			legacyBehavior
 			passHref>
 			<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-				CUSTOMIZE
+				CONTACT US
 			</NavigationMenuLink>
 		</Link>
 	</NavigationMenuItem>

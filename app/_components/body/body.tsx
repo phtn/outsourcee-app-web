@@ -28,17 +28,17 @@ const product: CheckoutProductProps = {
 
 const heroProps: HeroProps = {
 	action: <Checkout {...product} />,
-	image: '/images/soap-one.png',
-	imageAlt: 'soap',
+	image: '/images/ss-v1.png',
+	imageAlt: 'phone-ss',
 	subtext:
 		'Meticulously crafted to provide a rejuvenating and invigorating experience for your face and body.',
 	sticker: (
 		<FlashSticker
-			label='575'
+			label='FREE!'
 			lg
 		/>
 	),
-	title: 'Discover our unique skin-loving botanical extract.',
+	title: 'Delegate with confidence.',
 }
 
 const upItems = [

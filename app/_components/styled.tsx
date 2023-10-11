@@ -11,6 +11,7 @@ const Action = tw(Button)`
   duration-500
   mb-12
   xl:mb-0
+  ml-10
 `
 
 const DarkSection = tw.div`
@@ -31,7 +32,7 @@ const LgContainer = tw.div`
   items-center
   justify-center
   px-0
-  pt-20
+  pt-0
   bg-gradient-to-br
   bg-slate-100
   from-secondary/25

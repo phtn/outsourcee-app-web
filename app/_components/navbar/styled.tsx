@@ -32,9 +32,6 @@ const UserTrigger = tw.div`
 
 const MensCover = tw.div`
   h-full
-  bg-[url('/images/mens-bag.webp')]
-  bg-cover
-  bg-no-repeat
 `
 
 const Menubar = tw.div`

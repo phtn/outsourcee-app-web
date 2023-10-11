@@ -27,26 +27,28 @@ const Container = tw.div`
 
 const Img = tw(Image)`
   w-auto
-  md:h-[500px] 
-  h-[600px]
+  mt-8
+  md:h-[600px] 
+  h-[700px]
 `
 
 const Primary = tw.div`
   xl:flex
   h-full
   w-full
-  px-6
-  xl:px-20
-  lg:px-10
+  px-3
+  xl:px-10
+  lg:px-6
   flex-col
   justify-center
-  items-center
+  items-start
   xl:items-start
 `
 
 const Secondary = tw.div`
   xl:h-fit
-  lg:h-96
+  lg:h-screen
+  pt-16
   items-center
   justify-center
   md:rounded-xl
@@ -59,8 +61,8 @@ const Secondary = tw.div`
 
 // *  CONTENT * //
 const Title = tw.h1`
-  text-[2rem]
-  lg:text-[3rem]
+  text-[1.5rem]
+  lg:text-[2.5rem]
   font-thin
   text-foreground
   dark:text-secondary-foreground

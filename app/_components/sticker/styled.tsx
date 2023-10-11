@@ -6,7 +6,7 @@ type StickerProps = {
 }
 
 const Container = tw.div<StickerProps>`
-  ${(p) => (p.$lg ? 'h-32 w-32' : 'h- 10w-5')}
+  ${(p) => (p.$lg ? 'h-44 w-44' : 'h- 10w-5')}
 
   flex
   flex-row
@@ -15,13 +15,14 @@ const Container = tw.div<StickerProps>`
   to-secondary-foreground/10
   backdrop-blur-lg
   absolute
-  top-16
-  left-3/4
+  top-0
+  left-60
   rounded-full
   items-center
   justify-center
   fade-in-25
   duration-[10000]
+  z-1000
 `
 
 export { Container }
