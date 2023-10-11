@@ -50,7 +50,7 @@ const UserContentBody = tw.div`
   w-full
   h-[420px]
   transition-transform
-  duration-1000
+  duration-[1000]
   animate-in
   scale-90
 `
