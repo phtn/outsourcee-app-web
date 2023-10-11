@@ -1,6 +1,6 @@
-import { atom } from 'jotai'
-import { UserData } from './types'
+// import { atom } from 'jotai'
+// import { UserData } from './types'
 
-const AuthContext = atom<UserData | null>(null)
+// const AuthContext = atom<UserData | null>(null)
 
-export { AuthContext }
+// export { AuthContext }

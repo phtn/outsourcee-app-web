@@ -21,7 +21,7 @@ const Container = tw.div<StickerProps>`
   items-center
   justify-center
   fade-in-25
-  duration-[10000]
+  duration-[1000]
   z-1000
 `
 

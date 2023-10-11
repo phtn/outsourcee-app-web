@@ -190,7 +190,7 @@ export const User = () => {
 			// email: '',
 			// photoURL: '',
 		}
-	}, [])
+	}, [user?.displayName, user?.email, user?.photoURL])
 
 	const Header = useCallback(() => {
 		const options = map(
@@ -202,7 +202,7 @@ export const User = () => {
 				<UserHeader>{options.get(isAuthenticated)}</UserHeader>{' '}
 			</SheetHeader>
 		)
-	}, [isAuthenticated])
+	}, [isAuthenticated, greeting, userProps])
 
 	const Content = useCallback(() => {
 		const options = map(<Authenticated />, <Login />)
