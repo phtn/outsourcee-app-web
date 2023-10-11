@@ -40,7 +40,7 @@ import { UserDetailProps } from './types'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import Snack from '../snack'
 // import { globalAuth } from '@/app/page'
-import { UserData } from '@/app/_context/types'
+// import { UserData } from '@/app/_context/types'
 import { userDataAtom } from '@/app/_context/authContext'
 
 const auth = getAuth(firebaseApp)
@@ -174,70 +174,62 @@ const Footer = () => (
 )
 
 export const User = () => {
-	const [user, _setUser] = useAtom(userDataAtom)
-	const isAuthenticated = user !== null
 	// const [data] = useAtom(globalAuth)
 
-	const greeting = generateGreeting(new Date())
+	// const Header = useCallback(() => {
+	// 	const options = map(
+	// 		<UserDetails {...userProps} />,
+	// 		<SheetTitle>👋 &nbsp;&nbsp;{greeting}</SheetTitle>
+	// 	)
+	// 	return (
+	// 		<SheetHeader>
+	// 			<UserHeader>{options.get(isAuthenticated)}</UserHeader>{' '}
+	// 		</SheetHeader>
+	// 	)
+	// }, [isAuthenticated, greeting, userProps])
 
-	const userProps = useMemo(() => {
-		return {
-			displayName: user?.displayName,
-			email: user?.email,
-			photoURL: user?.photoURL,
+	// const Content = useCallback(() => {
+	// 	const options = map(<Authenticated />, <Login />)
+	// 	return <UserContent>{options.get(isAuthenticated)}</UserContent>
+	// }, [isAuthenticated])
 
-			// displayName: '',
-			// email: '',
-			// photoURL: '',
-		}
-	}, [user?.displayName, user?.email, user?.photoURL])
-
-	const Header = useCallback(() => {
-		const options = map(
-			<UserDetails {...userProps} />,
-			<SheetTitle>👋 &nbsp;&nbsp;{greeting}</SheetTitle>
-		)
-		return (
-			<SheetHeader>
-				<UserHeader>{options.get(isAuthenticated)}</UserHeader>{' '}
-			</SheetHeader>
-		)
-	}, [isAuthenticated, greeting, userProps])
-
-	const Content = useCallback(() => {
-		const options = map(<Authenticated />, <Login />)
-		return <UserContent>{options.get(isAuthenticated)}</UserContent>
-	}, [isAuthenticated])
-
-	const TriggerOptions = useCallback(() => {
-		// const photoURL = user?.photoURL
-		const photoURL = ''
-		// const initials = getInitials(user?.displayName)
-		const initials = getInitials('RE')
-		const options = map(
-			<Avatar>
-				<AvatarImage src={photoURL} />
-				<AvatarFallback>{initials}</AvatarFallback>
-			</Avatar>,
-			<UserCircle2Icon className='text-secondary-foreground' />
-		)
-		return <>{options.get(isAuthenticated)}</>
-	}, [isAuthenticated])
+	// const TriggerOptions = useCallback(() => {
+	// 	// const photoURL = user?.photoURL
+	// 	const photoURL = ''
+	// 	// const initials = getInitials(user?.displayName)
+	// 	const initials = getInitials('RE')
+	// 	const options = map(
+	// 		<Avatar>
+	// 			<AvatarImage src={photoURL} />
+	// 			<AvatarFallback>{initials}</AvatarFallback>
+	// 		</Avatar>,
+	// 		<UserCircle2Icon className='text-secondary-foreground' />
+	// 	)
+	// 	return <>{options.get(isAuthenticated)}</>
+	// }, [isAuthenticated])
 
 	return (
-		<Sheet>
-			<SheetTrigger asChild>
-				<Button
-					variant={'ghost'}
-					size={'icon'}>
-					<TriggerOptions />
-				</Button>
-			</SheetTrigger>
-			<SheetContent side='right'>
-				<Header />
-				<Content />
-				<Footer />
-			</SheetContent>
-		</Sheet>
+		<Button
+			variant={'ghost'}
+			size={'icon'}>
+			<UserCircle2Icon className='text-secondary-foreground' />
+		</Button>
 	)
+
+	// return (
+	// 	<Sheet>
+	// 		<SheetTrigger asChild>
+	// 			<Button
+	// 				variant={'ghost'}
+	// 				size={'icon'}>
+	// 				<TriggerOptions />
+	// 			</Button>
+	// 		</SheetTrigger>
+	// 		<SheetContent side='right'>
+	// 			<Header />
+	// 			<Content />
+	// 			<Footer />
+	// 		</SheetContent>
+	// 	</Sheet>
+	// )
 }
