@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import { Container } from './styled'
-import { BadgePercentIcon } from 'lucide-react'
 
 type Props = {
 	label: string
@@ -13,7 +11,7 @@ const Sticker = ({ label, lg }: Props) => {
 
 const FlashSticker = ({ label, lg }: Props) => (
 	<Container $lg={lg as boolean}>
-		<span className={`flex text-slate-900 text-[44px] font-bold leading-tight`}>
+		<span className={`flex text-slate-900 text-[32px] font-bold leading-tight`}>
 			{label}
 		</span>
 	</Container>

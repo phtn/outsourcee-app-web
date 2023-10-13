@@ -1,5 +1,4 @@
 'use client'
-
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -10,67 +9,51 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
-import {
-	Brand,
-	Container,
-	MensCover,
-	Menubar,
-	UserTrigger,
-	WomensCover,
-} from './styled'
+import { Brand, Container, Menubar } from './styled'
 import Link from 'next/link'
 import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 import '@/components/ui/styles.css'
-import User from '../user'
-import { Settings } from 'lucide-react'
+import { MobileMenu } from '../user/mobile-menu/mobile-menu'
 
 const Menu = () => (
 	<Menubar>
 		<NavigationMenu>
 			<NavigationMenuList>
-				<Mens />
-				<Womens />
-				<Kids />
-				<New />
-				<Customize />
+				<Services />
+				<Features />
+				<FAQs />
+				<Support />
 				<NavigationMenuIndicator className='NavigationMenuIndicator' />
 			</NavigationMenuList>
 		</NavigationMenu>
 	</Menubar>
 )
 
-export const Navbar = () => (
-	<Container>
-		<Brand>
-			outsourcee
-			<span className='font-thin text-xl text-foreground/75'>&trade;</span>
-		</Brand>
-		<Menu />
-		<UserTrigger>
-			<User />
-		</UserTrigger>
-	</Container>
+const TM = () => (
+	<span className='font-thin text-xl text-foreground/75'>&trade;</span>
 )
 
-const Mens = () => (
+export const Navbar = () => {
+	return (
+		<Container>
+			<Brand>
+				outsourcee
+				<TM />
+			</Brand>
+			<Menu />
+			<MobileMenu />
+		</Container>
+	)
+}
+
+const Services = () => (
 	<NavigationMenuItem>
 		<NavigationMenuTrigger>SERVICES</NavigationMenuTrigger>
 		<NavigationMenuContent className='NavigationMenuContent'>
 			<ul className='grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
 				<li className='row-span-3'>
-					<NavigationMenuLink asChild>
-						<MensCover>
-							<a
-								className='flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md'
-								href='/'>
-								<Settings className='text-stone-100 h-44 w-44' />
-								<div className='mb-2 mt-4 mr-3 text-xs font-bold text-primary-foreground overflow-hidden'>
-									Explore all services
-								</div>
-							</a>
-						</MensCover>
-					</NavigationMenuLink>
+					<NavigationMenuLink asChild></NavigationMenuLink>
 				</li>
 				<ListItem
 					href='/'
@@ -92,22 +75,22 @@ const Mens = () => (
 	</NavigationMenuItem>
 )
 
-const Womens = () => (
+const Features = () => (
 	<NavigationMenuItem>
 		<NavigationMenuTrigger>HOW IT WORKS</NavigationMenuTrigger>
 		{/* <NavigationMenuContent className='NavigationMenuContent'>
 			<ul className='grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
 				<li className='row-span-3'>
 					<NavigationMenuLink asChild>
-						<WomensCover>
+						<FeaturesCover>
 							<a
 								className='flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md'
 								href='/'>
 								<div className='mb-2 mt-4 mr-3 text-xs font-bold text-primary-foreground'>
-									NEW
+								FAQs	
 								</div>
 							</a>
-						</WomensCover>
+						</FeaturesCover>
 					</NavigationMenuLink>
 				</li>
 				<ListItem
@@ -130,7 +113,7 @@ const Womens = () => (
 	</NavigationMenuItem>
 )
 
-const Kids = () => (
+const Support = () => (
 	<NavigationMenuItem>
 		<Link
 			href='/'
@@ -143,7 +126,7 @@ const Kids = () => (
 	</NavigationMenuItem>
 )
 
-const New = () => (
+const FAQs = () => (
 	<NavigationMenuItem>
 		<Link
 			href='/'
@@ -151,19 +134,6 @@ const New = () => (
 			passHref>
 			<NavigationMenuLink className={navigationMenuTriggerStyle()}>
 				FAQs
-			</NavigationMenuLink>
-		</Link>
-	</NavigationMenuItem>
-)
-
-const Customize = () => (
-	<NavigationMenuItem>
-		<Link
-			href='/'
-			legacyBehavior
-			passHref>
-			<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-				CONTACT US
 			</NavigationMenuLink>
 		</Link>
 	</NavigationMenuItem>

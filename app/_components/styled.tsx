@@ -1,19 +1,6 @@
 import { Button } from '@/components/ui/button'
 import tw from 'tailwind-styled-components'
 
-const Action = tw(Button)`
-  rounded-full
-  transition-all
-  hover:px-12
-  px-10
-  py-4
-  ease-out
-  duration-500
-  mb-12
-  xl:mb-0
-  ml-10
-`
-
 const DarkSection = tw.div`
   flex
   bg-primary
@@ -65,7 +52,6 @@ const UserOverlay = tw.div`
 
 export {
 	DarkSection,
-	Action,
 	HeroOverlay,
 	LgContainer,
 	Main,

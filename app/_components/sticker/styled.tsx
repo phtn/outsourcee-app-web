@@ -1,4 +1,3 @@
-import { BadgePercent } from 'lucide-react'
 import tw from 'tailwind-styled-components'
 
 type StickerProps = {
@@ -6,7 +5,7 @@ type StickerProps = {
 }
 
 const Container = tw.div<StickerProps>`
-  ${(p) => (p.$lg ? 'h-32 w-32' : 'h- 10w-5')}
+  ${(p) => (p.$lg ? 'h-32 w-32' : 'h-10 w-5')}
 
   flex
   flex-row
@@ -15,8 +14,8 @@ const Container = tw.div<StickerProps>`
   to-secondary-foreground/10
   backdrop-blur-lg
   absolute
-  top-0
-  left-60
+  top-10
+  left-[calc(100vw-140px)]
   rounded-full
   items-center
   justify-center

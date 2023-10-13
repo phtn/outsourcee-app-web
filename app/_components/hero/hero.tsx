@@ -1,7 +1,6 @@
-import { ArrowRightIcon } from 'lucide-react'
-import { Action } from '../styled'
-import { Container, Img, Primary, Secondary, Subtext, Title } from './styled'
 import { ReactElement } from 'react'
+import Image from 'next/image'
+import { Action, Container, Primary, Secondary, Title } from './styled'
 
 type HeroProps = {
 	action: ReactElement
@@ -22,27 +21,27 @@ const Hero = (props: HeroProps) => {
 	return (
 		<Container>
 			<Primary>
-				<Title>Achieve more.</Title>
-				<Title>Simplify workload.</Title>
-				<Title>Delegate with confidence</Title>
+				<div className='flex flex-col items-center'>
+					<Title>Achieve more.</Title>
+					<Title>Simplify workload.</Title>
+					<Title>Delegate with confidence.</Title>
+				</div>
 				<span className='h-10'></span>
-				<Action size={'lg'}>
-					<span>Available soon!</span>
-					{/* <ArrowRightIcon
-						width={24}
-						height={24}
-						className='ml-3 h-4 w-auto'
-					/> */}
-				</Action>
+				<div className='flex flex-col items-center'>
+					<Action size={'lg'}>
+						<span>Available soon!</span>
+					</Action>
+				</div>
 			</Primary>
 			<Secondary>
-				<Img
+				<Image
 					alt={imageAlt}
 					src={image}
 					width={300}
 					height={300}
+					className='w-auto h-[700px] md:h-[600px] mt-8'
 				/>
-				{sticker}
+				{/* {sticker} */}
 			</Secondary>
 		</Container>
 	)

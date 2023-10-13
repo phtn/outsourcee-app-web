@@ -2,29 +2,26 @@ import tw from 'tailwind-styled-components'
 
 const Container = tw.div`
   flex
-  md:px-16
-  py-3
-  pr-5
-  pl-2
   items-center
   justify-between
   sticky
   backdrop-blur-lg
   top-0
   z-50
-
+  px-6
+  py-3
+  border-b
 `
 
 const Brand = tw.h1`
   flex
   text-[2rem]
   font-bold
-  w-[120px]
-  justify-center
+  w-full
   items-center
 `
 
-const UserTrigger = tw.div`
+const Hamburger = tw.div`
   flex
   flex-row
   justify-around
@@ -36,7 +33,7 @@ const MensCover = tw.div`
 
 const Menubar = tw.div`
   items-center
-  justify-center
+  justify-end
   transition-transform
   duration-200
   ease-out
@@ -56,4 +53,4 @@ const WomensCover = tw.div`
   bg-no-repeat
 `
 
-export { Brand, Container, Menubar, MensCover, UserTrigger, WomensCover }
+export { Brand, Container, Menubar, MensCover, Hamburger, WomensCover }
