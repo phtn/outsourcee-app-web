@@ -1,9 +1,5 @@
-import { initializeApp } from 'firebase/app'
-import { firebaseConfig } from '@/lib/db'
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
 import { createAndUpdateUser } from './createUser'
-
-initializeApp(firebaseConfig)
 
 let provider = new GoogleAuthProvider()
 
