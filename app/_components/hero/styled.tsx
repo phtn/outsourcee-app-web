@@ -10,23 +10,17 @@ const Action = tw(Button)`
   md:py-4
   ease-out
   duration-500
-  xl:mb-0
 `
 
 // *  CONTAINERS  * //
 const Container = tw.div`
   animate-out
   flex-1
-  xl:px-40
-  lg:px-24
-  lg:pb-24
   lg:grid
   lg:grid-cols-2
   block
   transition-all
   duration-1000
-  xl:hover:px-[10.85%]
-  lg:hover:px-[7.85%]
   lg:visible
 `
 
@@ -34,12 +28,10 @@ const Primary = tw.div`
   flex
   md:h-full
   w-full
-  xl:px-10
   lg:px-6
   flex-col
   justify-center
   items-center
-  xl:items-start
   bg-zinc-100
   py-12
 `
